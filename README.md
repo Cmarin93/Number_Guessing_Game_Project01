@@ -3,7 +3,7 @@
 Hello! 
 
   My name is Carlos A. Marin, and this is my first project from the Team Treehouse Tech-Degree program.
-  This program generates a random integer between (1 - 10), the player then must enter in a guess until they have found a match. Once a match is found the player will be scored based on the number of attempts to guess the correct number. The player with the least amount of guesses is crowned the winner!
+  This program generates a random integer between (1 - 10). The program will continue to prompt for a guess, until the guess is a matched with the randomly generated number. Once a match is found the player will be scored based on the number of attempts to guess the correct number. The player with the least amount of guesses is crowned the winner!
   
 REQUIREMENTS:
 -------------------------------------------------------------------------------------------------------------------------  
