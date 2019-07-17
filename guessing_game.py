@@ -49,7 +49,7 @@ def START_GAME():
                 continue
             else:
                 if selection == 1:    #Play Game
-                    replay, high_score, high_score_player = game(high_score, high_score_player) # This function processes 3 variables. Types by order: [boolean, high_score value, high_score_player value]
+                    replay, high_score, high_score_player = game_instance(high_score, high_score_player) # This function processes 3 variables. Types by order: [boolean, high_score value, high_score_player value]
                     if replay == True:
                         continue 
                     elif replay == False:# end-game
@@ -75,7 +75,7 @@ def START_GAME():
                     INVALID_OPTION()
                     CLEAR()
 
-def game(high_score, high_score_player):
+def game_instance(high_score, high_score_player):
     answer = random.randint(1, 10)
     score = 0
     CLEAR()
