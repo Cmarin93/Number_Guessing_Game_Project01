@@ -48,15 +48,15 @@ def START_GAME():
                 INVALID_OPTION()
                 continue
             else:
-                if selection == 1:    #Play Game
-                    replay, high_score, high_score_player = game_instance(high_score, high_score_player) # This function processes 3 variables. Types by order: [boolean, high_score value, high_score_player value]
+                if selection == 1:    # Play/Replay
+                    replay, high_score, high_score_player = game_instance(high_score, high_score_player) 
                     if replay == True:
                         continue 
                     elif replay == False:# end-game
                         game_running = False
                         champion(high_score, high_score_player)
                         break
-                elif selection == 2: #1 Player
+                elif selection == 2: # High Score Board
                     menu_high_score(high_score, high_score_player)
                 elif selection == 3: # Quit
                     asking_to_quit = True
