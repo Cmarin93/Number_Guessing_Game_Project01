@@ -20,9 +20,7 @@ def CLEAR():
     os.system('clear' if os.name == 'posix' else 'cls')
 
 def START_GAME():
-    game_running = True
-    high_score = None 
-    high_score_player = ""
+    game_running, high_score, high_score_player = True, None, ""
     while game_running:
         title_looping = True
         while title_looping:
@@ -63,7 +61,7 @@ def START_GAME():
                     CLEAR()
 
 def game_instance(high_score, high_score_player):
-    answer = random.randint(1, 11)
+    answer = random.randint(1, 10)
     score = 0
     CLEAR()
     print('\n\n' + border)
@@ -111,9 +109,9 @@ def game_instance(high_score, high_score_player):
                 input(press_enter)
                 CLEAR()
             elif guess == answer:
-                high_score, high_score_player = check_high_score(score, high_score, player, high_score_player) # determine if current game surpasses previous scores
-                playing_boolean = final_end_game() # determine if player wishes to continue
-                return playing_boolean, high_score, high_score_player   # every game instance returns [boolean, integer, string]
+                high_score, high_score_player = check_high_score(score, high_score, player, high_score_player) # determine winner
+                playing = replay_prompt() 
+                return playing, high_score, high_score_player  
         except ValueError:
             CLEAR()
             INVALID_OPTION()
@@ -169,9 +167,8 @@ def check_high_score(score, high_score, player, high_score_player):
     return high_score, high_score_player
 
     # Asking for a replay
-def final_end_game():
-        loopy = True
-        while loopy:
+def replay_prompt():
+        while True:
             CLEAR()
             print('\n\tWould you like to replay?')
             final_break = input('All data will be lost once game session is ended. ([Y]es/[N]o): ').upper()
