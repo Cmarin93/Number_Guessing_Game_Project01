@@ -22,7 +22,7 @@ def CLEAR():
 def START_GAME():
     game_running = True
     high_score = None 
-    high_score_player = "Charlie"
+    high_score_player = ""
     while game_running:
         title_looping = True
         while title_looping:
@@ -126,10 +126,10 @@ def game_instance(high_score, high_score_player):
 def menu_high_score(high_score, high_score_player): 
     CLEAR()
     if high_score == None:
-        print(border + '\n\nThere are no scores posted...\n\n' + border)
+        print(border + '\n\n\tThere are no scores posted...\n\n' + border)
         input(press_enter)
     else:
-        print(border + '\n\n{} is the champion with the score of "{}"\n\n'.format(high_score_player, high_score) + border + '\n')
+        print(border + '\n\n {} is the champion with the score of "{}"\n\n'.format(high_score_player, high_score) + border + '\n')
         input(press_enter)
         CLEAR()
 
@@ -155,18 +155,14 @@ def check_high_score(score, high_score, player, high_score_player):
     CLEAR()
     print('\nYou\'ve guessed the correct number!\nYour score is "{}"\n\n\n'.format(score) + border)
     if high_score == None:
-        high_score = score 
-        high_score_player = player
+        high_score, high_score_player = score, player
         print('The new high score is: "{}" by the player "{}"\n'.format(high_score, high_score_player))
         input(press_enter)
     elif score <= high_score:
-        CLEAR()
         print('Congratulations, {}! You hold 1st place!\n'.format(player))
         print('The previous high score is: "{}" by the player "{}"\n'.format(high_score, high_score_player) + border)
-        print('\n Your score is: "{}"'.format(score).center(50))
         input(press_enter)
-        high_score = score
-        high_score_player = player
+        high_score, high_score_player = score, player
     else:
         print('Sorry, but your score of "{}" does not surpass the score of "{}" by the player "{}"\n\n'.format(score, high_score, high_score_player) + border)
         input(press_enter)
@@ -177,7 +173,7 @@ def final_end_game():
         loopy = True
         while loopy:
             CLEAR()
-            print('Would you like to replay?')
+            print('\n\tWould you like to replay?')
             final_break = input('All data will be lost once game session is ended. ([Y]es/[N]o): ').upper()
             if final_break == 'Y' or final_break == 'YES':
                 return True
