@@ -1,9 +1,5 @@
-# Project 1: Number Guessing Game 
-###### *This game is entirely console/terminal based.*
-  
-![Number GUessing Game](Main_Frame.jpg)
+![Number Guessing Game](logo.png)
+###### Project 1: *This game is entirely console/terminal based.*
+![Preview](Main_Frame.png)
 
-  
- 
-  
-     Created By: Carlos A. Marin - July 2019
+        Created By: Carlos A. Marin - July 2019
