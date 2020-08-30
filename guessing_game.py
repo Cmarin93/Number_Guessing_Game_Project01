@@ -11,7 +11,6 @@ game_info = '''
     of guesses in order to claim 1st place!
 '''
 
-
 def INVALID_OPTION():
     print('Please enter a valid entery.\n')
     input(press_enter)
@@ -26,7 +25,7 @@ def START_GAME():
         while title_looping:
             try:    # Main Menu
                 CLEAR()
-                print(border + '\n\tNumber Guessing Game!\n' + '\tby Carlos A. Marin\n' + border + '\n\n')
+                print(border + '\n\tNumber Guessing Game!\n' + '\tby Carlos A. Marin\n' + border + '\n\n') 
                 print(border2 + '\n█ 1. Play Game  █ 2. #1 player!  █ 3. Quit Game  █\n' + border2)
                 selection = int(input('\n\nEnter one of the corresponding numbers: '))
             except ValueError:
