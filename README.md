@@ -1,4 +1,4 @@
-# Project 1: Number Guessing Game 
+# Project 1
 ###### *This game is entirely console/terminal based.*
 
 ![Number Guessing Game](logo.png)
