@@ -1,6 +1,6 @@
-![Number Guessing Game](logo.png)
+![Number Guessing Game](Art/logo.png)
 ###### Project 1: *This game is entirely console/terminal based.*
-![Preview](Main_Frame.png)
+![Preview](Art/SS.png)
 
 ## Information:
 
@@ -8,4 +8,4 @@
 
 
         Created By: Carlos A. Marin - July 2019
-![bottom](bottom.png)
+![bottom](Art/bottom.png)
